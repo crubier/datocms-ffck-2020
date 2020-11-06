@@ -1,4 +1,9 @@
 module.exports = {
+  future: {
+    removeDeprecatedGapUtilities: true,
+    purgeLayersByDefault: true,
+  },
+  purge: ["./pages/**/*.{js,jsx,ts,tsx}", "./components/**/*.{js,jsx,ts,tsx}"],
   theme: {
     extend: {
       colors: {
@@ -29,4 +34,10 @@ module.exports = {
       },
     },
   },
+  variants: {},
+  plugins: [
+    require("@tailwindcss/ui")({
+      // layout: "sidebar", // Not needed because we don't have a sidebar
+    }),
+  ],
 }
