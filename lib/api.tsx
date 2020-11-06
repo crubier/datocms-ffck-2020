@@ -20,7 +20,10 @@ export const responsiveImageFragment = `
   }
 `;
 
-export async function fetchAPI(query, { variables, preview } = {}) {
+export async function fetchAPI(
+  query,
+  { variables = null, preview = false } = {}
+) {
   const res = await fetch(API_URL + (preview ? "/preview" : ""), {
     method: "POST",
     headers: {
