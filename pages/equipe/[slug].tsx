@@ -8,7 +8,7 @@ export default function Equipe({ equipe }) {
     <div className="relative py-16 bg-white overflow-hidden">
       <div className="absolute top-2 right-2">
         <a
-          href="/"
+          href="/#equipe"
           //   type="button"
           className="rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:bg-gray-100 hover:text-gray-500 focus:outline-none focus:bg-gray-100 focus:text-gray-500 transition duration-150 ease-in-out"
         >
@@ -46,13 +46,14 @@ export default function Equipe({ equipe }) {
         </div>
 
         <div className="prose prose-lg text-gray-500 mx-auto">
-          <figure>
+          <figure className="text-center h-60">
             <Image
-              className="w-full rounded-lg object-contain"
+              className="w-full h-60 rounded-lg object-contain"
               src={equipe?.photo.url}
               alt={equipe?.nom}
-              width="1310"
-              height="873"
+              layout="fixed"
+              width="240"
+              height="240"
               priority
             />
           </figure>
@@ -89,14 +90,12 @@ export async function getStaticProps({ params, preview = false }) {
     }
   );
 
-  const presentation = await markdownToHtml(data?.equipe?.presentation || "");
-
   return {
     props: {
       preview,
       equipe: {
         ...data?.equipe,
-        presentation,
+        presentation: await markdownToHtml(data?.equipe?.presentation || ""),
       },
     },
   };

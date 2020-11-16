@@ -1,43 +1,103 @@
-import Container from '../components/container'
-import MoreStories from '../components/more-stories'
-import HeroPost from '../components/hero-post'
-import Intro from '../components/intro'
-import Layout from '../components/layout'
-import { getAllPostsForHome } from '../lib/api'
-import Head from 'next/head'
-import { CMS_NAME } from '../lib/constants'
+import Image from "next/image";
+import { fetchAPI } from "../lib/api";
+import markdownToHtml from "../lib/markdownToHtml";
+import { AccueilEquipe } from "../components/AccueilEquipe";
+import { AccueilTitre } from "../components/AccueilTitre";
+import { AccueilMenu } from "../components/AccueilMenu";
 
-export default function Index({ allPosts }) {
-  const heroPost = allPosts[0]
-  const morePosts = allPosts.slice(1)
+export default function Accueil({ accueil, allEquipes }) {
   return (
-    <>
-      <Layout>
-        <Head>
-          <title>Next.js Blog Example with {CMS_NAME}</title>
-        </Head>
-        <Container>
-          <Intro />
-          {heroPost && (
-            <HeroPost
-              title={heroPost.title}
-              coverImage={heroPost.coverImage}
-              date={heroPost.date}
-              author={heroPost.author}
-              slug={heroPost.slug}
-              excerpt={heroPost.excerpt}
-            />
-          )}
-          {morePosts.length > 0 && <MoreStories posts={morePosts} />}
-        </Container>
-      </Layout>
-    </>
-  )
+    <div className="relative bg-gray-50">
+      <AccueilMenu accueil={accueil} />
+
+      <AccueilTitre accueil={accueil} />
+
+      <AccueilEquipe accueil={accueil} allEquipes={allEquipes} />
+    </div>
+  );
 }
 
-export async function getStaticProps({ preview }) {
-  const allPosts = await getAllPostsForHome(preview)
-  return {
-    props: { allPosts },
+export async function getStaticProps({ params, preview = false }) {
+  const data = await fetchAPI(
+    `
+{
+  accueil {
+    titre
+    sousTitre
+    imageCouverture {
+      url
+    }
+    edito
+    titreEdito
+    sousTitreEdito
+    imageEdito {
+      url
+    }
+    titreEquipe
+    sousTitreEquipe
+    texteEquipe
+    imageEquipe {
+      url
+    }
+    titreProjet
+    sousTitreProjet
+    texteProjet
+    imageProjet {
+      url
+    }
+    titreQuestions
+    sousTitreQuestions
+    texteQuestions
+    imageQuestions {
+      url
+    }
   }
+  allEquipes(orderBy: nom_ASC) {
+    nom
+    slug
+    titre
+    photo {
+      url
+    }
+  }
+  allProjets(orderBy: categorie_ASC) {
+    categorie
+    slug
+    titre
+    image {
+      url
+    }
+  }
+  allQuestions(orderBy: question_ASC) {
+    question
+    reponseRapide
+    slug
+    image {
+      url
+    }
+  }
+}
+`,
+    {
+      preview,
+    }
+  );
+
+  return {
+    props: {
+      preview,
+      allEquipes: data?.allEquipes,
+      allProjets: data?.allProjets,
+      allQuestions: data?.allQuestions,
+      accueil: {
+        ...data?.accueil,
+        edito: await markdownToHtml(data?.accueil?.edito || ""),
+        texteEquipe: await markdownToHtml(data?.accueil?.texteEquipe || ""),
+        texteProjet: await markdownToHtml(data?.accueil?.texteProjet || ""),
+        texteQuestions: await markdownToHtml(
+          data?.accueil?.texteQuestions || ""
+        ),
+      },
+    },
+  };
 }
