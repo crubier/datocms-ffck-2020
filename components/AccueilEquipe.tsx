@@ -23,8 +23,8 @@ export function AccueilEquipe({ accueil, allEquipes }: any) {
             <ul className="space-y-12 sm:grid sm:grid-cols-2 sm:gap-12 sm:space-y-0 lg:gap-x-8">
               {allEquipes &&
                 allEquipes.map((equipe) => (
-                  <a href={`/equipe/${equipe.slug}`}>
-                    <li>
+                  <li>
+                    <a href={`/equipe/${equipe.slug}`}>
                       <div className="flex items-center space-x-4 lg:space-x-6">
                         <div className="w-16 h-16 lg:w-20 lg:h-20">
                           <Image
@@ -42,8 +42,8 @@ export function AccueilEquipe({ accueil, allEquipes }: any) {
                           <p className="text-blue-600">{equipe.titre}</p>
                         </div>
                       </div>
-                    </li>
-                  </a>
+                    </a>
+                  </li>
                 ))}
             </ul>
           </div>
