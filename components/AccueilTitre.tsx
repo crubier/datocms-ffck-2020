@@ -26,7 +26,6 @@ export function AccueilTitre({ accueil }: any) {
               <a
                 target="_blank"
                 href="https://www.datocms-assets.com/37238/1605521551-projet-federal-2021-2024.pdf"
-                href="#"
                 className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base leading-6 font-medium rounded-md text-blue-600 bg-white hover:text-blue-500 focus:outline-none focus:border-blue-300 focus:shadow-outline-blue transition duration-150 ease-in-out md:py-4 md:text-lg md:px-10"
               >
                 Projet Complet
