@@ -6,6 +6,7 @@ import { AccueilTitre } from "../components/AccueilTitre";
 import { AccueilMenu } from "../components/AccueilMenu";
 import { AccueilProjet } from "../components/AccueilProjet";
 import { AccueilQuestion } from "../components/AccueilQuestion";
+import { AccueilContact } from "../components/AccueilContact";
 import { groupByArray } from "../lib/utils";
 
 export default function Accueil({
@@ -21,6 +22,7 @@ export default function Accueil({
       <AccueilEquipe accueil={accueil} allEquipes={allEquipes} />
       <AccueilProjet accueil={accueil} allProjets={allProjets} />
       <AccueilQuestion accueil={accueil} allQuestions={allQuestions} />
+      <AccueilContact accueil={accueil} />
     </div>
   );
 }
@@ -33,8 +35,7 @@ export async function getStaticProps({ params, preview = false }) {
     titre
     sousTitre
     imageCouverture {
-      url
-      responsiveImage(imgixParams: {fm: jpg, fit: fillmax,w: 1200, h: 800}) {
+      responsiveImage(imgixParams: {fm: jpg, fit: fillmax, w: 1200, h: 800, blendMode:multiply, blendAlpha:80, blendColor:"1C64F2"}) {
         src
       }
     }
@@ -43,12 +44,16 @@ export async function getStaticProps({ params, preview = false }) {
     sousTitreEdito
     imageEdito {
       url
+      width
+      height
     }
     titreEquipe
     sousTitreEquipe
     texteEquipe
     imageEquipe {
       url
+      width
+      height
     }
     titreProjet
     sousTitreProjet
@@ -63,6 +68,8 @@ export async function getStaticProps({ params, preview = false }) {
     texteQuestions
     imageQuestions {
       url
+      width
+      height
     }
   }
   allEquipes(orderBy: nom_ASC) {
@@ -71,6 +78,8 @@ export async function getStaticProps({ params, preview = false }) {
     titre
     photo {
       url
+      width
+      height
     }
   }
   allProjets(orderBy: categorie_ASC) {
@@ -89,6 +98,8 @@ export async function getStaticProps({ params, preview = false }) {
     slug
     image {
       url
+      width
+      height
     }
   }
 }

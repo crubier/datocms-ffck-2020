@@ -8,18 +8,18 @@ export function AccueilMenu({ accueil }: any) {
     <div className="relative bg-white shadow" id="menu">
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
         <div className="flex justify-between items-center py-6 md:justify-start md:space-x-10">
-          <div className="w-0 flex-1 flex">
-            <a href="#" className="inline-flex ">
-              <h2 className="text-xl tracking-tight leading-10 font-extrabold text-gray-900 sm:text-xl sm:leading-none md:text-xl lg:text-xl xl:text-xl">
+          {/* <div className="w-0 flex-1 flex">
+            <a href="#" className="inline-flex "> */}
+          {/* <h2 className="text-xl tracking-tight leading-10 font-extrabold text-gray-900 sm:text-xl sm:leading-none md:text-xl lg:text-xl xl:text-xl">
                 <span className="text-blue-600">{accueil.titre}</span>
-              </h2>
-              {/* <img
+              </h2> */}
+          {/* <img
                 className="h-8 w-auto sm:h-10"
                 src="https://tailwindui.com/img/logos/v1/workflow-mark-on-white.svg"
                 alt="Workflow"
               /> */}
-            </a>
-          </div>
+          {/* </a>
+          </div> */}
           <div className="-mr-2 -my-2 md:hidden">
             <button
               type="button"
