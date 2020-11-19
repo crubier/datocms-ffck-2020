@@ -82,7 +82,7 @@ export function AccueilContact({ accueil }: any) {
         </div>
         <div className="mt-12">
           <form
-            action="#"
+            action="https://formspree.io/f/xvovqyrp"
             method="POST"
             className="grid grid-cols-1 gap-y-6 sm:grid-cols-2 sm:gap-x-8"
           >
@@ -130,15 +130,16 @@ export function AccueilContact({ accueil }: any) {
             </div> */}
             <div className="sm:col-span-2">
               <label
-                htmlFor="email"
+                htmlFor="nom"
                 className="block text-sm font-medium leading-5 text-gray-700"
               >
                 Nom
               </label>
               <div className="mt-1 relative rounded-md shadow-sm">
                 <input
-                  id="email"
-                  type="email"
+                  id="nom"
+                  name="nom"
+                  type="nom"
                   className="form-input py-3 px-4 block w-full transition ease-in-out duration-150"
                 />
               </div>
@@ -153,6 +154,7 @@ export function AccueilContact({ accueil }: any) {
               <div className="mt-1 relative rounded-md shadow-sm">
                 <input
                   id="email"
+                  name="_replyto"
                   type="email"
                   className="form-input py-3 px-4 block w-full transition ease-in-out duration-150"
                 />
@@ -193,6 +195,7 @@ export function AccueilContact({ accueil }: any) {
               <div className="mt-1 relative rounded-md shadow-sm">
                 <textarea
                   id="message"
+                  name="message"
                   rows={4}
                   className="form-textarea py-3 px-4 block w-full transition ease-in-out duration-150"
                 ></textarea>
@@ -237,7 +240,7 @@ export function AccueilContact({ accueil }: any) {
             <div className="sm:col-span-2">
               <span className="w-full inline-flex rounded-md shadow-sm">
                 <button
-                  type="button"
+                  type="submit"
                   className="w-full inline-flex items-center justify-center px-6 py-3 border border-transparent text-base leading-6 font-medium rounded-md text-white bg-blue-600 hover:bg-blue-500 focus:outline-none focus:border-blue-700 focus:shadow-outline-blue active:bg-blue-700 transition ease-in-out duration-150"
                 >
                   Envoyer
