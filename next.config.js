@@ -6,6 +6,6 @@ module.exports = {
       process.env.NEXT_EXAMPLE_CMS_DATOCMS_API_TOKEN,
   },
   images: {
-    domains: ["www.datocms-assets.com"],
+    domains: ["www.terredepagaies.fr", "www.datocms-assets.com"],
   },
 };

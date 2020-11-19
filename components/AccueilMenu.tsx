@@ -66,7 +66,7 @@ export function AccueilMenu({ accueil }: any) {
             <a
               target="_blank"
               href="https://www.datocms-assets.com/37238/1605521551-projet-federal-2021-2024.pdf"
-              className={` whitespace-no-wrap text-base leading-6 font-medium  text-gray-500  hover:text-gray-900  transition  ease-in-out  duration-150`}
+              className={` whitespace-nowrap text-base leading-6 font-medium  text-gray-500  hover:text-gray-900  transition  ease-in-out  duration-150`}
             >
               Projet complet (PDF)
             </a>
@@ -74,7 +74,7 @@ export function AccueilMenu({ accueil }: any) {
               <a
                 target="_blank"
                 href="https://www.datocms-assets.com/37238/1605521357-projet-federal-2021-2024-synthese.pdf"
-                className="whitespace-no-wrap inline-flex items-center justify-center px-4 py-2 border border-transparent text-base leading-6 font-medium rounded-md text-white bg-blue-600 hover:bg-blue-500 focus:outline-none focus:border-blue-700 focus:shadow-outline-blue active:bg-blue-700 transition ease-in-out duration-150"
+                className="whitespace-nowrap inline-flex items-center justify-center px-4 py-2 border border-transparent text-base leading-6 font-medium rounded-md text-white bg-blue-600 hover:bg-blue-500 focus:outline-none focus:border-blue-700 focus:ring-blue active:bg-blue-700 transition ease-in-out duration-150"
               >
                 Synthèse du Projet (PDF)
               </a>
@@ -98,7 +98,7 @@ export function AccueilMenu({ accueil }: any) {
             className="absolute top-0 inset-x-0 z-10 p-2 transition transform origin-top-right md:hidden"
           >
             <div className="rounded-lg shadow-lg">
-              <div className="rounded-lg shadow-xs bg-white divide-y-2 divide-gray-50">
+              <div className="rounded-lg ring-1 ring-black ring-opacity-5 bg-white divide-y-2 divide-gray-50">
                 <div className="pt-5 pb-6 px-5 space-y-6">
                   <div className="flex items-center justify-between">
                     <div>
@@ -301,7 +301,7 @@ export function AccueilMenu({ accueil }: any) {
                     <span className="w-full flex rounded-md shadow-sm">
                       <a
                         href="#"
-                        className="w-full flex items-center justify-center px-4 py-2 border border-transparent text-base leading-6 font-medium rounded-md text-white bg-blue-600 hover:bg-blue-500 focus:outline-none focus:border-blue-700 focus:shadow-outline-blue active:bg-blue-700 transition ease-in-out duration-150"
+                        className="w-full flex items-center justify-center px-4 py-2 border border-transparent text-base leading-6 font-medium rounded-md text-white bg-blue-600 hover:bg-blue-500 focus:outline-none focus:border-blue-700 focus:ring-blue active:bg-blue-700 transition ease-in-out duration-150"
                       >
                         Sign up
                       </a>

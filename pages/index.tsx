@@ -1,4 +1,3 @@
-import Image from "next/image";
 import { fetchAPI } from "../lib/api";
 import markdownToHtml from "../lib/markdownToHtml";
 import { AccueilEquipe } from "../components/AccueilEquipe";
