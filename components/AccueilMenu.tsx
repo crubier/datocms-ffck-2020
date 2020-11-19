@@ -76,7 +76,7 @@ export function AccueilMenu({ accueil }: any) {
                 href={accueil.projetSynthese.url}
                 className="whitespace-no-wrap inline-flex items-center justify-center px-4 py-2 border border-transparent text-base leading-6 font-medium rounded-md text-white bg-blue-600 hover:bg-blue-500 focus:outline-none focus:border-blue-700 focus:shadow-outline-blue active:bg-blue-700 transition ease-in-out duration-150"
               >
-                Synthèse du Projet (PDF)
+                Synthèse du projet (PDF)
               </a>
             </span>
           </div>
@@ -108,6 +108,9 @@ export function AccueilMenu({ accueil }: any) {
                         src="https://tailwindui.com/img/logos/v1/workflow-mark-on-white.svg"
                         alt="Workflow"
                       /> */}
+                      <h2 className="text-xl tracking-tight leading-10 font-extrabold text-gray-900 sm:text-xl sm:leading-none md:text-xl lg:text-xl xl:text-xl">
+                        <span className="text-blue-600">{accueil.titre}</span>
+                      </h2>
                     </div>
                     <div className="-mr-2">
                       <button
@@ -138,7 +141,7 @@ export function AccueilMenu({ accueil }: any) {
                         href="#equipe"
                         className="-m-3 p-3 flex items-center space-x-3 rounded-md hover:bg-gray-50 transition ease-in-out duration-150"
                       >
-                        <svg
+                        {/* <svg
                           className="flex-shrink-0 h-6 w-6 text-blue-600"
                           xmlns="http://www.w3.org/2000/svg"
                           fill="none"
@@ -151,7 +154,7 @@ export function AccueilMenu({ accueil }: any) {
                             strokeWidth="2"
                             d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"
                           />
-                        </svg>
+                        </svg> */}
                         <div className="text-base leading-6 font-medium text-gray-900">
                           Équipe
                         </div>
@@ -160,7 +163,7 @@ export function AccueilMenu({ accueil }: any) {
                         href="#projet"
                         className="-m-3 p-3 flex items-center space-x-3 rounded-md hover:bg-gray-50 transition ease-in-out duration-150"
                       >
-                        <svg
+                        {/* <svg
                           className="flex-shrink-0 h-6 w-6 text-blue-600"
                           xmlns="http://www.w3.org/2000/svg"
                           fill="none"
@@ -173,7 +176,7 @@ export function AccueilMenu({ accueil }: any) {
                             strokeWidth="2"
                             d="M15 15l-2 5L9 9l11 4-5 2zm0 0l5 5M7.188 2.239l.777 2.897M5.136 7.965l-2.898-.777M13.95 4.05l-2.122 2.122m-5.657 5.656l-2.12 2.122"
                           />
-                        </svg>
+                        </svg> */}
                         <div className="text-base leading-6 font-medium text-gray-900">
                           Projet
                         </div>
@@ -182,7 +185,7 @@ export function AccueilMenu({ accueil }: any) {
                         href="#questions"
                         className="-m-3 p-3 flex items-center space-x-3 rounded-md hover:bg-gray-50 transition ease-in-out duration-150"
                       >
-                        <svg
+                        {/* <svg
                           className="flex-shrink-0 h-6 w-6 text-blue-600"
                           xmlns="http://www.w3.org/2000/svg"
                           fill="none"
@@ -195,7 +198,7 @@ export function AccueilMenu({ accueil }: any) {
                             strokeWidth="2"
                             d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"
                           />
-                        </svg>
+                        </svg> */}
                         <div className="text-base leading-6 font-medium text-gray-900">
                           Questions
                         </div>
@@ -247,8 +250,8 @@ export function AccueilMenu({ accueil }: any) {
                     </nav>
                   </div>
                 </div>
-                {/* <div className="py-6 px-5 space-y-6">
-                  <div className="grid grid-cols-2 gap-y-4 gap-x-8">
+                <div className="py-6 px-5 space-y-6">
+                  {/* <div className="grid grid-cols-2 gap-y-4 gap-x-8">
                     <a
                       href="#"
                       className="text-base leading-6 font-medium text-gray-900 hover:text-gray-700 transition ease-in-out duration-150"
@@ -297,27 +300,28 @@ export function AccueilMenu({ accueil }: any) {
                     >
                       Events
                     </a>
-                  </div>
+                  </div> */}
                   <div className="space-y-6">
                     <span className="w-full flex rounded-md shadow-sm">
                       <a
-                        href="#"
+                        target="_blank"
+                        href={accueil.projetSynthese.url}
                         className="w-full flex items-center justify-center px-4 py-2 border border-transparent text-base leading-6 font-medium rounded-md text-white bg-blue-600 hover:bg-blue-500 focus:outline-none focus:border-blue-700 focus:shadow-outline-blue active:bg-blue-700 transition ease-in-out duration-150"
                       >
-                        Sign up
+                        Synthèse du projet (PDF)
                       </a>
                     </span>
                     <p className="text-center text-base leading-6 font-medium text-gray-500">
-                      Existing customer?
                       <a
-                        href="#"
+                        target="_blank"
+                        href={accueil.projetDetaille.url}
                         className="text-blue-600 hover:text-blue-500 transition ease-in-out duration-150"
                       >
-                        n in
+                        Projet détaillé (PDF)
                       </a>
                     </p>
                   </div>
-                </div>*/}
+                </div>
               </div>
             </div>
           </div>
