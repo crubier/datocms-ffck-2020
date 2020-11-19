@@ -8,7 +8,7 @@ export default function Equipe({ equipe }) {
     <div className="relative py-16 bg-white overflow-hidden">
       <div className="absolute top-2 right-2">
         <a
-          href="/#equipe"
+          href={`/#equipe-${equipe?.slug}`}
           //   type="button"
           className="rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:bg-gray-100 hover:text-gray-500 focus:outline-none focus:bg-gray-100 focus:text-gray-500 transition duration-150 ease-in-out"
         >
