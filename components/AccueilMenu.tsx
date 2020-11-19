@@ -65,7 +65,7 @@ export function AccueilMenu({ accueil }: any) {
           <div className="hidden md:flex items-center justify-end space-x-8 md:flex-1 lg:w-0">
             <a
               target="_blank"
-              href="https://www.datocms-assets.com/37238/1605521551-projet-federal-2021-2024.pdf"
+              href={accueil.projetDetaille.url}
               className={` whitespace-no-wrap text-base leading-6 font-medium  text-gray-500  hover:text-gray-900  transition  ease-in-out  duration-150`}
             >
               Projet complet (PDF)
@@ -73,7 +73,7 @@ export function AccueilMenu({ accueil }: any) {
             <span className="inline-flex rounded-md shadow-sm">
               <a
                 target="_blank"
-                href="https://www.datocms-assets.com/37238/1605521357-projet-federal-2021-2024-synthese.pdf"
+                href={accueil.projetSynthese.url}
                 className="whitespace-no-wrap inline-flex items-center justify-center px-4 py-2 border border-transparent text-base leading-6 font-medium rounded-md text-white bg-blue-600 hover:bg-blue-500 focus:outline-none focus:border-blue-700 focus:shadow-outline-blue active:bg-blue-700 transition ease-in-out duration-150"
               >
                 Synthèse du Projet (PDF)
@@ -95,18 +95,19 @@ export function AccueilMenu({ accueil }: any) {
         {(ref) => (
           <div
             ref={ref}
-            className="absolute top-0 inset-x-0 z-10 p-2 transition transform origin-top-right md:hidden"
+            onBlur={() => setIsOpen(false)}
+            className="z-20 absolute top-0 inset-x-0 z-10 p-2 transition transform origin-top-right md:hidden"
           >
             <div className="rounded-lg shadow-lg">
               <div className="rounded-lg shadow-xs bg-white divide-y-2 divide-gray-50">
                 <div className="pt-5 pb-6 px-5 space-y-6">
                   <div className="flex items-center justify-between">
                     <div>
-                      <img
+                      {/* <img
                         className="h-8 w-auto"
                         src="https://tailwindui.com/img/logos/v1/workflow-mark-on-white.svg"
                         alt="Workflow"
-                      />
+                      /> */}
                     </div>
                     <div className="-mr-2">
                       <button
@@ -134,7 +135,7 @@ export function AccueilMenu({ accueil }: any) {
                   <div>
                     <nav className="grid gap-y-8">
                       <a
-                        href="#"
+                        href="#equipe"
                         className="-m-3 p-3 flex items-center space-x-3 rounded-md hover:bg-gray-50 transition ease-in-out duration-150"
                       >
                         <svg
@@ -152,11 +153,11 @@ export function AccueilMenu({ accueil }: any) {
                           />
                         </svg>
                         <div className="text-base leading-6 font-medium text-gray-900">
-                          Analytics
+                          Équipe
                         </div>
                       </a>
                       <a
-                        href="#"
+                        href="#projet"
                         className="-m-3 p-3 flex items-center space-x-3 rounded-md hover:bg-gray-50 transition ease-in-out duration-150"
                       >
                         <svg
@@ -174,11 +175,11 @@ export function AccueilMenu({ accueil }: any) {
                           />
                         </svg>
                         <div className="text-base leading-6 font-medium text-gray-900">
-                          Engagement
+                          Projet
                         </div>
                       </a>
                       <a
-                        href="#"
+                        href="#questions"
                         className="-m-3 p-3 flex items-center space-x-3 rounded-md hover:bg-gray-50 transition ease-in-out duration-150"
                       >
                         <svg
@@ -196,10 +197,10 @@ export function AccueilMenu({ accueil }: any) {
                           />
                         </svg>
                         <div className="text-base leading-6 font-medium text-gray-900">
-                          Security
+                          Questions
                         </div>
                       </a>
-                      <a
+                      {/* <a
                         href="#"
                         className="-m-3 p-3 flex items-center space-x-3 rounded-md hover:bg-gray-50 transition ease-in-out duration-150"
                       >
@@ -242,11 +243,11 @@ export function AccueilMenu({ accueil }: any) {
                         <div className="text-base leading-6 font-medium text-gray-900">
                           Automations
                         </div>
-                      </a>
+                      </a> */}
                     </nav>
                   </div>
                 </div>
-                <div className="py-6 px-5 space-y-6">
+                {/* <div className="py-6 px-5 space-y-6">
                   <div className="grid grid-cols-2 gap-y-4 gap-x-8">
                     <a
                       href="#"
@@ -316,7 +317,7 @@ export function AccueilMenu({ accueil }: any) {
                       </a>
                     </p>
                   </div>
-                </div>
+                </div>*/}
               </div>
             </div>
           </div>

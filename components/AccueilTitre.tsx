@@ -56,9 +56,9 @@ export function AccueilTitre({ accueil }: any) {
             <h2 className="text-6xl tracking-tight leading-10 font-extrabold text-white text-center">
               {accueil.titre}
             </h2>
-            <p className="mt-3 max-w-md mx-auto text-lg text-gray-200 text-center">
+            <h3 className="mt-3 max-w-md mx-auto text-2xl text-white text-center sha">
               {accueil.sousTitre}
-            </p>
+            </h3>
             <div className="mt-10 flex justify-center">
               {/* <div className="rounded-md shadow">
                 <a
@@ -70,10 +70,10 @@ export function AccueilTitre({ accueil }: any) {
               </div> */}
               <div className="mt-0 rounded-md shadow">
                 <a
-                  href="#"
+                  href="#projet"
                   className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base leading-6 font-medium rounded-md text-blue-600 bg-white hover:text-blue-500 focus:outline-none focus:border-blue-300 focus:shadow-outline-blue transition duration-150 ease-in-out"
                 >
-                  Live demo
+                  Voir le projet fédéral 2024
                 </a>
               </div>
             </div>

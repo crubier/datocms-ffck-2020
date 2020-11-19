@@ -12,13 +12,15 @@ export function AccueilEquipe({ accueil, allEquipes }: any) {
               {accueil.titreEquipe}
             </h2>
             {accueil.imageEquipe ? (
-              <Image
-                className="object-center"
-                src={accueil.imageEquipe.url}
-                width={accueil?.imageEquipe?.width}
-                height={accueil?.imageEquipe?.height}
-                layout="responsive"
-              />
+              <div className="mx-auto w-96 sm:w-96">
+                <Image
+                  className="relative object-center"
+                  src={accueil.imageEquipe.url}
+                  width={accueil?.imageEquipe?.width}
+                  height={accueil?.imageEquipe?.height}
+                  layout="responsive"
+                />
+              </div>
             ) : null}
 
             <div
@@ -39,7 +41,7 @@ export function AccueilEquipe({ accueil, allEquipes }: any) {
                       /> */}
                       <div className="mx-auto h-40 w-40 rounded-full xl:w-56 xl:h-56">
                         <Image
-                          className=" rounded-full  object-contain"
+                          className="rounded-full  object-contain"
                           src={equipe?.photo?.url}
                           layout="responsive"
                           width={160}

@@ -30,79 +30,86 @@ export default function Accueil({
 export async function getStaticProps({ params, preview = false }) {
   const data = await fetchAPI(
     `
-{
-  accueil {
-    titre
-    sousTitre
-    imageCouverture {
-      responsiveImage(imgixParams: {fm: jpg, fit: fillmax, w: 1200, h: 800, blendMode:multiply, blendAlpha:80, blendColor:"1C64F2"}) {
-        src
+    {
+      accueil {
+        titre
+        sousTitre
+        imageCouverture {
+          responsiveImage(imgixParams: {fm: jpg, fit: fillmax, w: 1200, h: 800, blendMode: multiply, blendAlpha: 80, blendColor: "1C64F2"}) {
+            src
+          }
+        }
+        edito
+        titreEdito
+        sousTitreEdito
+        imageEdito {
+          url
+          width
+          height
+        }
+        titreEquipe
+        sousTitreEquipe
+        texteEquipe
+        imageEquipe {
+          url
+          width
+          height
+        }
+        titreProjet
+        sousTitreProjet
+        texteProjet
+        imageProjet {
+          url
+          width
+          height
+        }
+        titreQuestions
+        sousTitreQuestions
+        texteQuestions
+        imageQuestions {
+          url
+          width
+          height
+        }
+        projetDetaille {
+          url
+        }
+        projetSynthese {
+          url
+        }
+      }
+      allEquipes(orderBy: nom_ASC) {
+        nom
+        slug
+        titre
+        photo {
+          url
+          width
+          height
+        }
+      }
+      allProjets(orderBy: categorie_ASC) {
+        categorie
+        slug
+        titre
+        image {
+          url
+          width
+          height
+        }
+      }
+      allQuestions(orderBy: question_ASC) {
+        question
+        reponseRapide
+        slug
+        image {
+          url
+          width
+          height
+        }
       }
     }
-    edito
-    titreEdito
-    sousTitreEdito
-    imageEdito {
-      url
-      width
-      height
-    }
-    titreEquipe
-    sousTitreEquipe
-    texteEquipe
-    imageEquipe {
-      url
-      width
-      height
-    }
-    titreProjet
-    sousTitreProjet
-    texteProjet
-    imageProjet {
-      url
-      width
-      height
-    }
-    titreQuestions
-    sousTitreQuestions
-    texteQuestions
-    imageQuestions {
-      url
-      width
-      height
-    }
-  }
-  allEquipes(orderBy: nom_ASC) {
-    nom
-    slug
-    titre
-    photo {
-      url
-      width
-      height
-    }
-  }
-  allProjets(orderBy: categorie_ASC) {
-    categorie
-    slug
-    titre
-    image {
-      url
-      width
-      height
-    }
-  }
-  allQuestions(orderBy: question_ASC) {
-    question
-    reponseRapide
-    slug
-    image {
-      url
-      width
-      height
-    }
-  }
-}
+    
 `,
     {
       preview,

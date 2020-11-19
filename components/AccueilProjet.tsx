@@ -10,16 +10,18 @@ export function AccueilProjet({ accueil, allProjets }: any) {
     >
       <div className="relative max-w-7xl mx-auto">
         <div className="text-center">
-          <h2 className="text-3xl leading-9 tracking-tight font-extrabold text-gray-900 m-3 sm:m-4 sm:text-4xl sm:leading-10">
+          <h2 className="text-3xl leading-9 tracking-tight font-extrabold text-gray-900 m-3 sm:m-4 sm:text-4xl sm:leading-10 md:text-5xl">
             {accueil.titreProjet}
           </h2>
           {accueil.imageProjet ? (
-            <Image
-              src={accueil.imageProjet.url}
-              width={accueil?.imageProjet?.width}
-              height={accueil?.imageProjet?.height}
-              layout="responsive"
-            />
+            <a target="_blank" href={accueil.projetDetaille.url} className="">
+              <Image
+                src={accueil.imageProjet.url}
+                width={accueil?.imageProjet?.width}
+                height={accueil?.imageProjet?.height}
+                layout="responsive"
+              />
+            </a>
           ) : null}
 
           <div
@@ -31,7 +33,7 @@ export function AccueilProjet({ accueil, allProjets }: any) {
         {allProjets.map(({ key: categorie, values: projets }) => {
           return (
             <>
-              <h3 className="text-xl leading-9 tracking-tight font-extrabold text-gray-900 sm:text-2xl sm:leading-10 mt-12">
+              <h3 className="text-xl leading-9 tracking-tight font-extrabold text-gray-900 sm:text-2xl sm:leading-10 mt-32">
                 {categorie}
               </h3>
               <div

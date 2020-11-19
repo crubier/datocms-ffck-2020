@@ -11,13 +11,15 @@ export function AccueilQuestion({ accueil, allQuestions }: any) {
           {accueil.titreQuestions}
         </h2>
         {accueil.imageQuestions ? (
-          <Image
-            className="object-center"
-            src={accueil.imageQuestions.url}
-            width={accueil?.imageQuestions?.width}
-            height={accueil?.imageQuestions?.height}
-            layout="responsive"
-          />
+          <div className="mx-auto h-24 w-64 sm:w-64 sm:h-24">
+            <Image
+              className="relative object-center"
+              src={accueil.imageQuestions.url}
+              width={accueil?.imageQuestions?.width}
+              height={accueil?.imageQuestions?.height}
+              layout="responsive"
+            />
+          </div>
         ) : null}
         <div
           className={`${markdownStyles["markdown"]} "text-xl leading-7 text-gray-500"`}
@@ -27,7 +29,11 @@ export function AccueilQuestion({ accueil, allQuestions }: any) {
           <dl className="space-y-10 md:space-y-0 md:grid md:grid-cols-2 md:grid-rows-2 md:gap-x-8 md:gap-y-12 lg:grid-cols-3">
             {allQuestions &&
               allQuestions.map((question) => (
-                <div key={question.slug} className="space-y-2">
+                <div
+                  key={question.slug}
+                  id={`question-${question.slug}`}
+                  className="space-y-2"
+                >
                   <a href={`/question/${question.slug}`}>
                     <dt className="text-lg leading-6 font-medium text-gray-900">
                       {question.question}
