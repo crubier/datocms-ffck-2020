@@ -6,6 +6,7 @@ import { AccueilTitre } from "../components/AccueilTitre";
 import { AccueilMenu } from "../components/AccueilMenu";
 import { AccueilProjet } from "../components/AccueilProjet";
 import { AccueilQuestion } from "../components/AccueilQuestion";
+import { groupByArray } from "../lib/utils";
 
 export default function Accueil({
   accueil,
@@ -54,6 +55,8 @@ export async function getStaticProps({ params, preview = false }) {
     texteProjet
     imageProjet {
       url
+      width
+      height
     }
     titreQuestions
     sousTitreQuestions
@@ -76,6 +79,8 @@ export async function getStaticProps({ params, preview = false }) {
     titre
     image {
       url
+      width
+      height
     }
   }
   allQuestions(orderBy: question_ASC) {
@@ -97,7 +102,7 @@ export async function getStaticProps({ params, preview = false }) {
     props: {
       preview,
       allEquipes: data?.allEquipes,
-      allProjets: data?.allProjets,
+      allProjets: groupByArray(data?.allProjets, "categorie"),
       allQuestions: data?.allQuestions,
       accueil: {
         ...data?.accueil,

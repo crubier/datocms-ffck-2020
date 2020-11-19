@@ -35,14 +35,14 @@ export default function Projet({ projet }) {
       <div className="relative px-4 sm:px-6 lg:px-8">
         <div className="text-lg max-w-prose mx-auto mb-6">
           <p className="text-base text-center leading-6 text-blue-600 font-semibold tracking-wide uppercase">
-            Un projet
+            {projet?.categorie}
           </p>
           <h1 className="mt-2 mb-2 text-3xl text-center leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl sm:leading-10">
             {projet?.titre}
           </h1>
-          <p className="text-center mb-8 text-xl text-gray-500 leading-8">
+          {/* <p className="text-center mb-8 text-xl text-gray-500 leading-8">
             {projet?.categorie}
-          </p>
+          </p> */}
         </div>
 
         <div className="prose prose-lg text-gray-500 mx-auto">
@@ -51,9 +51,9 @@ export default function Projet({ projet }) {
               className="w-full h-120 rounded-lg object-contain"
               src={projet?.image.url}
               alt={projet?.titre}
-              layout="fixed"
-              width="480"
-              height="480"
+              layout="responsive"
+              width={projet?.image.width}
+              height={projet?.image.height}
               priority
             />
           </figure>
@@ -63,6 +63,15 @@ export default function Projet({ projet }) {
             className={markdownStyles["markdown"]}
             dangerouslySetInnerHTML={{ __html: projet?.contenu }}
           />
+
+          <span className="inline-flex rounded-md shadow-sm text-white">
+            <a
+              href={`/#projet-${projet.slug}`}
+              className="whitespace-no-wrap inline-flex items-center justify-center px-4 py-2 border border-transparent text-base leading-6 font-medium rounded-md text-white bg-blue-600 hover:bg-blue-500 focus:outline-none focus:border-blue-700 focus:shadow-outline-blue active:bg-blue-700 transition ease-in-out duration-150"
+            >
+              Retour
+            </a>
+          </span>
         </div>
       </div>
     </div>
@@ -75,10 +84,12 @@ export async function getStaticProps({ params, preview = false }) {
   projet(filter: {slug: {eq: $slug}}) {
     titre
     slug
+    categorie
     image {
       url
+      width
+      height
     }
-    titre
     contenu
   }
 }`,
