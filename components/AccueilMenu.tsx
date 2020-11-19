@@ -9,12 +9,15 @@ export function AccueilMenu({ accueil }: any) {
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
         <div className="flex justify-between items-center py-6 md:justify-start md:space-x-10">
           <div className="w-0 flex-1 flex">
-            <a href="#" className="inline-flex">
-              <img
+            <a href="#" className="inline-flex ">
+              <h2 className="text-xl tracking-tight leading-10 font-extrabold text-gray-900 sm:text-xl sm:leading-none md:text-xl lg:text-xl xl:text-xl">
+                <span className="text-blue-600">{accueil.titre}</span>
+              </h2>
+              {/* <img
                 className="h-8 w-auto sm:h-10"
                 src="https://tailwindui.com/img/logos/v1/workflow-mark-on-white.svg"
                 alt="Workflow"
-              />
+              /> */}
             </a>
           </div>
           <div className="-mr-2 -my-2 md:hidden">
@@ -41,43 +44,39 @@ export function AccueilMenu({ accueil }: any) {
           </div>
           <nav className="hidden md:flex space-x-10">
             <a
-              href="#"
+              href="#equipe"
               className="text-gray-500 inline-flex items-center space-x-2 text-base leading-6 font-medium hover:text-gray-900 transition ease-in-out duration-150"
             >
-              Solutions
+              Equipe
             </a>
             <a
-              href="#"
+              href="#projet"
               className="text-base leading-6 font-medium text-gray-500 hover:text-gray-900 transition ease-in-out duration-150"
             >
-              Pricing
+              Projet
             </a>
             <a
-              href="#"
+              href="#questions"
               className="text-base leading-6 font-medium text-gray-500 hover:text-gray-900 transition ease-in-out duration-150"
             >
-              Docs
-            </a>
-            <a
-              href="#"
-              className="text-gray-500 inline-flex items-center space-x-2 text-base leading-6 font-medium hover:text-gray-900 transition ease-in-out duration-150"
-            >
-              More
+              Questions
             </a>
           </nav>
           <div className="hidden md:flex items-center justify-end space-x-8 md:flex-1 lg:w-0">
             <a
-              href="#"
-              className="whitespace-no-wrap text-base leading-6 font-medium text-gray-500 hover:text-gray-900 transition ease-in-out duration-150"
+              target="_blank"
+              href="https://www.datocms-assets.com/37238/1605521551-projet-federal-2021-2024.pdf"
+              className={` whitespace-no-wrap text-base leading-6 font-medium  text-gray-500  hover:text-gray-900  transition  ease-in-out  duration-150`}
             >
-              Sign in
+              Projet complet (PDF)
             </a>
             <span className="inline-flex rounded-md shadow-sm">
               <a
-                href="#"
+                target="_blank"
+                href="https://www.datocms-assets.com/37238/1605521357-projet-federal-2021-2024-synthese.pdf"
                 className="whitespace-no-wrap inline-flex items-center justify-center px-4 py-2 border border-transparent text-base leading-6 font-medium rounded-md text-white bg-blue-600 hover:bg-blue-500 focus:outline-none focus:border-blue-700 focus:shadow-outline-blue active:bg-blue-700 transition ease-in-out duration-150"
               >
-                Sign up
+                Synthèse du Projet (PDF)
               </a>
             </span>
           </div>

@@ -4,15 +4,22 @@ import markdownToHtml from "../lib/markdownToHtml";
 import { AccueilEquipe } from "../components/AccueilEquipe";
 import { AccueilTitre } from "../components/AccueilTitre";
 import { AccueilMenu } from "../components/AccueilMenu";
+import { AccueilProjet } from "../components/AccueilProjet";
+import { AccueilQuestion } from "../components/AccueilQuestion";
 
-export default function Accueil({ accueil, allEquipes }) {
+export default function Accueil({
+  accueil,
+  allEquipes,
+  allProjets,
+  allQuestions,
+}) {
   return (
     <div className="relative bg-gray-50">
       <AccueilMenu accueil={accueil} />
-
       <AccueilTitre accueil={accueil} />
-
       <AccueilEquipe accueil={accueil} allEquipes={allEquipes} />
+      <AccueilProjet accueil={accueil} allProjets={allProjets} />
+      <AccueilQuestion accueil={accueil} allQuestions={allQuestions} />
     </div>
   );
 }
@@ -26,6 +33,9 @@ export async function getStaticProps({ params, preview = false }) {
     sousTitre
     imageCouverture {
       url
+      responsiveImage(imgixParams: {fm: jpg, fit: fillmax,w: 1200, h: 800}) {
+        src
+      }
     }
     edito
     titreEdito
