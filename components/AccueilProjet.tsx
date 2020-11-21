@@ -44,7 +44,7 @@ export function AccueilProjet({ accueil, allProjets }: any) {
                   <div
                     key={projet.slug}
                     id={`projet-${projet.slug}`}
-                    className="flex flex-col rounded-lg shadow-lg overflow-hidden"
+                    className="relative flex flex-col rounded-lg shadow-lg overflow-hidden"
                   >
                     <a
                       href={`/projet/${projet.slug}`}
@@ -61,6 +61,27 @@ export function AccueilProjet({ accueil, allProjets }: any) {
                         />
                       </div>
                     </a>
+                    <div className="absolute top-4 right-4">
+                      <span className="inline-flex rounded-md">
+                        <a
+                          target="_blank"
+                          href={projet?.detailPdf?.url}
+                          className="font-medium whitespace-no-wrap inline-flex items-center justify-center px-3 py-1 border border-transparent text-base leading-6 rounded-md text-gray-900 bg-gray-200 hover:bg-gray-100 focus:outline-none focus:border-blue-700 focus:shadow-outline-blue active:bg-gray-400 transition ease-in-out duration-150"
+                        >
+                          Lire détails (PDF)
+                          <svg
+                            className="-mr-1 ml-1 h-5 w-5 text-gray-400"
+                            xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 20 20"
+                            fill="currentColor"
+                            aria-hidden="true"
+                          >
+                            <path d="M11 3a1 1 0 100 2h2.586l-6.293 6.293a1 1 0 101.414 1.414L15 6.414V9a1 1 0 102 0V4a1 1 0 00-1-1h-5z" />
+                            <path d="M5 5a2 2 0 00-2 2v8a2 2 0 002 2h8a2 2 0 002-2v-3a1 1 0 10-2 0v3H5V7h3a1 1 0 000-2H5z" />
+                          </svg>
+                        </a>
+                      </span>
+                    </div>
                     {/* <div className="flex-1 bg-white p-6 flex flex-col justify-between"> */}
                     {/* <div className="flex-1">
                         <p className="text-sm leading-5 font-medium text-indigo-600">

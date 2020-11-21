@@ -1,3 +1,4 @@
+import { Head } from "next/document";
 import Image from "next/image";
 import { fetchAPI } from "../lib/api";
 import markdownToHtml from "../lib/markdownToHtml";
