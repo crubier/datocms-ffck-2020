@@ -6,10 +6,10 @@ export function AccueilProjet({ accueil, allProjets }: any) {
   return (
     <div
       id="projet"
-      className="relative bg-gray-100 pt-16 pb-20 px-4 sm:px-6 lg:pt-24 lg:pb-28 lg:px-8"
+      className="relative bg-white pt-16 pb-20 px-4 sm:px-6 lg:pt-24 lg:pb-28 lg:px-8"
     >
-      <div className="relative max-w-7xl mx-auto">
-        <div className="text-center">
+      <div className="relative max-w-7xl mx-auto space-y-5 sm:mx-auto sm:max-w-xl sm:space-y-4 lg:max-w-5xl">
+        <div className="text-center ">
           <h2 className="text-3xl leading-9 tracking-tight font-extrabold text-gray-900 m-3 sm:m-4 sm:text-4xl sm:leading-10 md:text-5xl">
             {accueil.titreProjet}
           </h2>

@@ -4,7 +4,7 @@ import markdownStyles from "../components/markdown-styles.module.css";
 
 export function AccueilEquipe({ accueil, allEquipes }: any) {
   return (
-    <div className="bg-white" id="equipe">
+    <div className="bg-gray-50" id="equipe">
       <div className="max-w-screen-xl mx-auto py-12 px-4 text-center sm:px-6 lg:px-8 lg:py-24">
         <div className="space-y-12">
           <div className="space-y-5 sm:mx-auto sm:max-w-xl sm:space-y-4 lg:max-w-5xl">
@@ -12,9 +12,9 @@ export function AccueilEquipe({ accueil, allEquipes }: any) {
               {accueil.titreEquipe}
             </h2>
             {accueil.imageEquipe ? (
-              <div className="mx-auto w-96 sm:w-96">
+              <div className="mx-auto w-96 sm:w-96 bg-white rounded-xl">
                 <Image
-                  className="relative object-center"
+                  className="relative object-center bg-white"
                   src={accueil.imageEquipe.url}
                   width={accueil?.imageEquipe?.width}
                   height={accueil?.imageEquipe?.height}
@@ -28,6 +28,9 @@ export function AccueilEquipe({ accueil, allEquipes }: any) {
               dangerouslySetInnerHTML={{ __html: accueil.texteEquipe }}
             />
           </div>
+          <h2 className="text-3xl leading-9 font-extrabold tracking-tight m-6 sm:m-4 sm:text-4xl mt-12">
+            Notre Équipe
+          </h2>
           <ul className="mx-auto space-y-16 sm:grid sm:grid-cols-2 sm:gap-16 sm:space-y-0 lg:grid-cols-3 lg:max-w-5xl">
             {allEquipes &&
               allEquipes.map((equipe) => (

@@ -3,6 +3,7 @@ import { fetchAPI } from "../lib/api";
 import markdownToHtml from "../lib/markdownToHtml";
 import { AccueilEquipe } from "../components/AccueilEquipe";
 import { AccueilTitre } from "../components/AccueilTitre";
+import { AccueilEdito } from "../components/AccueilEdito";
 import { AccueilMenu } from "../components/AccueilMenu";
 import { AccueilProjet } from "../components/AccueilProjet";
 import { AccueilQuestion } from "../components/AccueilQuestion";
@@ -19,6 +20,7 @@ export default function Accueil({
     <div className="relative bg-gray-50">
       <AccueilMenu accueil={accueil} />
       <AccueilTitre accueil={accueil} />
+      <AccueilEdito accueil={accueil} />
       <AccueilEquipe accueil={accueil} allEquipes={allEquipes} />
       <AccueilProjet accueil={accueil} allProjets={allProjets} />
       <AccueilQuestion accueil={accueil} allQuestions={allQuestions} />
@@ -26,7 +28,7 @@ export default function Accueil({
       <div className="fixed bottom-6 right-6">
         <span className="inline-flex rounded-md shadow-sm">
           <a
-            href={"#accueil"}
+            href={"#menu"}
             className="whitespace-no-wrap inline-flex items-center justify-center px-4 py-2 border border-transparent text-base leading-6 font-medium rounded-md text-gray-900 bg-gray-200 hover:bg-gray-100 focus:outline-none focus:border-blue-700 focus:shadow-outline-blue active:bg-gray-400 transition ease-in-out duration-150"
           >
             Accueil
@@ -59,7 +61,7 @@ export async function getStaticProps({ params, preview = false }) {
         titre
         sousTitre
         imageCouverture {
-          responsiveImage(imgixParams: {fm: jpg, fit: fillmax, w: 1200, h: 800, blendMode: multiply, blendAlpha: 80, blendColor: "1C64F2"}) {
+          responsiveImage(imgixParams: {fm: jpg, fit: fillmax, w: 1600, h: 1200, blendMode: multiply, blendAlpha: 80, blendColor: "1C64F2"}) {
             src
           }
         }
@@ -95,6 +97,8 @@ export async function getStaticProps({ params, preview = false }) {
           width
           height
         }
+        titreContact
+        texteContact
         projetDetaille {
           url
         }
@@ -116,6 +120,9 @@ export async function getStaticProps({ params, preview = false }) {
         categorie
         slug
         titre
+    		detailPdf {
+          url
+        }
         image {
           url
           width
@@ -133,7 +140,6 @@ export async function getStaticProps({ params, preview = false }) {
         }
       }
     }
-    
 `,
     {
       preview,
