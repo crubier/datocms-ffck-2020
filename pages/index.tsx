@@ -23,6 +23,30 @@ export default function Accueil({
       <AccueilProjet accueil={accueil} allProjets={allProjets} />
       <AccueilQuestion accueil={accueil} allQuestions={allQuestions} />
       <AccueilContact accueil={accueil} />
+      <div className="fixed bottom-6 right-6">
+        <span className="inline-flex rounded-md shadow-sm">
+          <a
+            href={"#accueil"}
+            className="whitespace-no-wrap inline-flex items-center justify-center px-4 py-2 border border-transparent text-base leading-6 font-medium rounded-md text-gray-900 bg-gray-200 hover:bg-gray-100 focus:outline-none focus:border-blue-700 focus:shadow-outline-blue active:bg-gray-400 transition ease-in-out duration-150"
+          >
+            Accueil
+            <svg
+              className="-mr-1 ml-2 h-5 w-5"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 20 20"
+              fill="currentColor"
+              aria-hidden="true"
+            >
+              <path
+                fill-rule="evenodd"
+                // d="M 5.293 12.707 a 1 1 90 0 0 1.414 0 L 10 9.414 l 3.293 3.293 a 1 1 90 1 0 1.414 -1.414 l -4 -4 a 1 1 90 0 0 -1.414 0 l -4 4 a 1 1 90 0 0 0 1.414 z"
+                d="M 5.293 14.707 a 1 1 90 0 0 1.414 0 L 10 11.414 l 3.293 3.293 a 1 1 90 1 0 1.414 -1.414 l -4 -4 a 1 1 90 0 0 -1.414 0 l -4 4 a 1 1 90 0 0 0 1.414 z M 5.293 9.707 a 1 1 90 0 0 1.414 0 L 10 6.414 l 3.293 3.293 a 1 1 90 1 0 1.414 -1.414 l -4 -4 a 1 1 90 0 0 -1.414 0 l -4 4 a 1 1 90 0 0 0 1.414 z"
+                clip-rule="evenodd"
+              />
+            </svg>
+          </a>
+        </span>
+      </div>
     </div>
   );
 }

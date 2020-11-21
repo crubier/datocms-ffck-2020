@@ -3,7 +3,7 @@ import Image from "next/image";
 
 export function AccueilTitre({ accueil }: any) {
   return (
-    <main className="lg:relative" id="titre">
+    <main className="lg:relative" id="accueil">
       {/* <div className="mx-auto max-w-7xl w-full pt-16 pb-20 text-center lg:py-48 lg:text-left">
         <div className="px-4 lg:w-1/2 sm:px-8 xl:pr-16">
           <h2 className="text-4xl tracking-tight leading-10 font-extrabold text-gray-900 sm:text-5xl sm:leading-none md:text-6xl lg:text-5xl xl:text-6xl">
@@ -52,14 +52,17 @@ export function AccueilTitre({ accueil }: any) {
         />
 
         <div className="z-10 flex content-center justify-center align-middle h-full w-full items-center">
-          <div className="h-24">
-            <h2 className="text-6xl tracking-tight leading-10 font-extrabold text-white text-center">
+          <div className="">
+            <h1 className="md:text-8xl sm:text-8xl text-7xl tracking-tight leading-10 font-extrabold text-white text-center md:mb-12 sm:mb-12 mb-8">
+              FFCK
+            </h1>
+            <h2 className="md:text-7xl sm:text-6xl text-5xl leading-10 text-white text-center md:mb-10 sm:mb-8 mb-4">
               {accueil.titre}
             </h2>
-            <h3 className="mt-3 max-w-md mx-auto text-2xl text-white text-center sha">
+            <h3 className="md:text-2xl sm:text-2xl text-2xl max-w-md mx-auto  text-white text-center md:mb-12 sm:mb-12 mb-8">
               {accueil.sousTitre}
             </h3>
-            <div className="mt-10 flex justify-center">
+            <div className="flex justify-center">
               {/* <div className="rounded-md shadow">
                 <a
                   href="#"
