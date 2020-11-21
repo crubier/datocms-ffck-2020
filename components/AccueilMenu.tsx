@@ -6,7 +6,7 @@ export function AccueilMenu({ accueil }: any) {
   const [isOpen, setIsOpen] = useState(false);
   return (
     <div className="relative bg-white shadow" id="menu">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 md:pl-0">
         <div className="flex justify-between items-center py-6 md:justify-start md:space-x-10">
           {/* <div className="w-0 flex-1 flex">
             <a href="#" className="inline-flex "> */}
@@ -42,33 +42,55 @@ export function AccueilMenu({ accueil }: any) {
               </svg>
             </button>
           </div>
-          <nav className="hidden md:flex space-x-10">
+          <nav className="hidden ml-0 md:ml-0 md:flex space-x-6 ">
+            <a
+              href="#edito"
+              className="text-gray-500 inline-flex items-center space-x-2 text-base leading-6 font-medium hover:text-gray-900 transition ease-in-out duration-150 flex-no-wrap"
+            >
+              Pourquoi?
+            </a>
             <a
               href="#equipe"
-              className="text-gray-500 inline-flex items-center space-x-2 text-base leading-6 font-medium hover:text-gray-900 transition ease-in-out duration-150"
+              className="text-gray-500 inline-flex items-center space-x-2 text-base leading-6 font-medium hover:text-gray-900 transition ease-in-out duration-150 flex-no-wrap"
             >
               Equipe
             </a>
             <a
               href="#projet"
-              className="text-base leading-6 font-medium text-gray-500 hover:text-gray-900 transition ease-in-out duration-150"
+              className="text-gray-500 inline-flex items-center space-x-2 text-base leading-6 font-medium hover:text-gray-900 transition ease-in-out duration-150 flex-no-wrap"
             >
               Projet
             </a>
             <a
               href="#questions"
-              className="text-base leading-6 font-medium text-gray-500 hover:text-gray-900 transition ease-in-out duration-150"
+              className="text-gray-500 inline-flex items-center space-x-2 text-base leading-6 font-medium hover:text-gray-900 transition ease-in-out duration-150 flex-no-wrap"
             >
               Questions
+            </a>
+            <a
+              href="#contact"
+              className="text-gray-500 inline-flex items-center space-x-2 text-base leading-6 font-medium hover:text-gray-900 transition ease-in-out duration-150 flex-no-wrap"
+            >
+              Contact
             </a>
           </nav>
           <div className="hidden md:flex items-center justify-end space-x-8 md:flex-1 lg:w-0">
             <a
               target="_blank"
               href={accueil.projetDetaille.url}
-              className={` whitespace-no-wrap text-base leading-6 font-medium  text-gray-500  hover:text-gray-900  transition  ease-in-out  duration-150`}
+              className={` whitespace-no-wrap inline-flex items-center justify-center text-base leading-6 font-medium  text-gray-500  hover:text-gray-900  transition  ease-in-out  duration-150`}
             >
-              Projet complet (PDF)
+              Projet (PDF)
+              <svg
+                className="-mr-1 ml-1 h-5 w-5 text-gray-400"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 20 20"
+                fill="currentColor"
+                aria-hidden="true"
+              >
+                <path d="M11 3a1 1 0 100 2h2.586l-6.293 6.293a1 1 0 101.414 1.414L15 6.414V9a1 1 0 102 0V4a1 1 0 00-1-1h-5z" />
+                <path d="M5 5a2 2 0 00-2 2v8a2 2 0 002 2h8a2 2 0 002-2v-3a1 1 0 10-2 0v3H5V7h3a1 1 0 000-2H5z" />
+              </svg>
             </a>
             <span className="inline-flex rounded-md shadow-sm">
               <a
@@ -76,7 +98,17 @@ export function AccueilMenu({ accueil }: any) {
                 href={accueil.projetSynthese.url}
                 className="whitespace-no-wrap inline-flex items-center justify-center px-4 py-2 border border-transparent text-base leading-6 font-medium rounded-md text-white bg-blue-600 hover:bg-blue-500 focus:outline-none focus:border-blue-700 focus:shadow-outline-blue active:bg-blue-700 transition ease-in-out duration-150"
               >
-                Synthèse du projet (PDF)
+                Synthèse (PDF)
+                <svg
+                  className="-mr-1 ml-1 h-5 w-5 text-blue-300"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 20 20"
+                  fill="currentColor"
+                  aria-hidden="true"
+                >
+                  <path d="M11 3a1 1 0 100 2h2.586l-6.293 6.293a1 1 0 101.414 1.414L15 6.414V9a1 1 0 102 0V4a1 1 0 00-1-1h-5z" />
+                  <path d="M5 5a2 2 0 00-2 2v8a2 2 0 002 2h8a2 2 0 002-2v-3a1 1 0 10-2 0v3H5V7h3a1 1 0 000-2H5z" />
+                </svg>
               </a>
             </span>
           </div>
@@ -137,6 +169,28 @@ export function AccueilMenu({ accueil }: any) {
                   </div>
                   <div>
                     <nav className="grid gap-y-8">
+                      <a
+                        href="#edito"
+                        className="-m-3 p-3 flex items-center space-x-3 rounded-md hover:bg-gray-50 transition ease-in-out duration-150"
+                      >
+                        {/* <svg
+                          className="flex-shrink-0 h-6 w-6 text-blue-600"
+                          xmlns="http://www.w3.org/2000/svg"
+                          fill="none"
+                          viewBox="0 0 24 24"
+                          stroke="currentColor"
+                        >
+                          <path
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            strokeWidth="2"
+                            d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"
+                          />
+                        </svg> */}
+                        <div className="text-base leading-6 font-medium text-gray-900">
+                          Pourquoi ?
+                        </div>
+                      </a>
                       <a
                         href="#equipe"
                         className="-m-3 p-3 flex items-center space-x-3 rounded-md hover:bg-gray-50 transition ease-in-out duration-150"
@@ -200,7 +254,29 @@ export function AccueilMenu({ accueil }: any) {
                           />
                         </svg> */}
                         <div className="text-base leading-6 font-medium text-gray-900">
-                          Questions
+                          Questions / Anti Fake News
+                        </div>
+                      </a>
+                      <a
+                        href="#contact"
+                        className="-m-3 p-3 flex items-center space-x-3 rounded-md hover:bg-gray-50 transition ease-in-out duration-150"
+                      >
+                        {/* <svg
+                          className="flex-shrink-0 h-6 w-6 text-blue-600"
+                          xmlns="http://www.w3.org/2000/svg"
+                          fill="none"
+                          viewBox="0 0 24 24"
+                          stroke="currentColor"
+                        >
+                          <path
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            strokeWidth="2"
+                            d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"
+                          />
+                        </svg> */}
+                        <div className="text-base leading-6 font-medium text-gray-900">
+                          Contact
                         </div>
                       </a>
                       {/* <a
@@ -309,15 +385,35 @@ export function AccueilMenu({ accueil }: any) {
                         className="w-full flex items-center justify-center px-4 py-2 border border-transparent text-base leading-6 font-medium rounded-md text-white bg-blue-600 hover:bg-blue-500 focus:outline-none focus:border-blue-700 focus:shadow-outline-blue active:bg-blue-700 transition ease-in-out duration-150"
                       >
                         Synthèse du projet (PDF)
+                        <svg
+                          className="-mr-1 ml-1 h-5 w-5 text-blue-300"
+                          xmlns="http://www.w3.org/2000/svg"
+                          viewBox="0 0 20 20"
+                          fill="currentColor"
+                          aria-hidden="true"
+                        >
+                          <path d="M11 3a1 1 0 100 2h2.586l-6.293 6.293a1 1 0 101.414 1.414L15 6.414V9a1 1 0 102 0V4a1 1 0 00-1-1h-5z" />
+                          <path d="M5 5a2 2 0 00-2 2v8a2 2 0 002 2h8a2 2 0 002-2v-3a1 1 0 10-2 0v3H5V7h3a1 1 0 000-2H5z" />
+                        </svg>
                       </a>
                     </span>
                     <p className="text-center text-base leading-6 font-medium text-gray-500">
                       <a
                         target="_blank"
                         href={accueil.projetDetaille.url}
-                        className="text-blue-600 hover:text-blue-500 transition ease-in-out duration-150"
+                        className="flex items-center justify-center  text-blue-600 hover:text-blue-500 transition ease-in-out duration-150"
                       >
                         Projet détaillé (PDF)
+                        <svg
+                          className="-mr-1 ml-1 h-5 w-5 text-blue-400"
+                          xmlns="http://www.w3.org/2000/svg"
+                          viewBox="0 0 20 20"
+                          fill="currentColor"
+                          aria-hidden="true"
+                        >
+                          <path d="M11 3a1 1 0 100 2h2.586l-6.293 6.293a1 1 0 101.414 1.414L15 6.414V9a1 1 0 102 0V4a1 1 0 00-1-1h-5z" />
+                          <path d="M5 5a2 2 0 00-2 2v8a2 2 0 002 2h8a2 2 0 002-2v-3a1 1 0 10-2 0v3H5V7h3a1 1 0 000-2H5z" />
+                        </svg>
                       </a>
                     </p>
                   </div>

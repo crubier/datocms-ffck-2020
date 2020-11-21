@@ -22,7 +22,7 @@ export function AccueilQuestion({ accueil, allQuestions }: any) {
           </div>
         ) : null}
         <div
-          className={`${markdownStyles["markdown"]} "text-xl leading-7 text-gray-500"`}
+          className={`${markdownStyles["markdown"]} text-center text-xl leading-7 text-gray-500`}
           dangerouslySetInnerHTML={{ __html: accueil.texteQuestions }}
         />
         <div className="mt-12">

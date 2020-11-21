@@ -4,7 +4,10 @@ import markdownStyles from "../components/markdown-styles.module.css";
 
 export function AccueilContact({ accueil }: any) {
   return (
-    <div className="bg-gray-100 py-16 px-4 overflow-hidden sm:px-6 lg:px-8 lg:py-24">
+    <div
+      id="contact"
+      className="bg-gray-100 py-16 px-4 overflow-hidden sm:px-6 lg:px-8 lg:py-24"
+    >
       <div className="relative max-w-xl mx-auto">
         <svg
           className="absolute left-full transform translate-x-1/2"
@@ -72,13 +75,11 @@ export function AccueilContact({ accueil }: any) {
         </svg>
         <div className="text-center">
           <h2 className="text-3xl leading-9 font-extrabold tracking-tight text-gray-900 sm:text-4xl sm:leading-10">
-            Nous Contacter
+            {accueil?.titreContact}
           </h2>
-          {/* <p className="mt-4 text-lg leading-6 text-gray-500">
-            Nous soumettons ce projet à votre expertise. Nous resterons à
-            l’écoute de tous pour que chacun puisse contribuer à alimenter cette
-            réflexion qui doit donner un nouvel élan à notre fédération.
-          </p> */}
+          <p className="mt-4 text-lg leading-6 text-gray-500">
+            {accueil?.texteContact}
+          </p>
         </div>
         <div className="mt-12">
           <form

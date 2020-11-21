@@ -62,21 +62,21 @@ export function AccueilTitre({ accueil }: any) {
             <h3 className="md:text-2xl sm:text-2xl text-2xl max-w-md mx-auto  text-white text-center md:mb-12 sm:mb-12 mb-8">
               {accueil.sousTitre}
             </h3>
-            <div className="flex justify-center">
-              {/* <div className="rounded-md shadow">
-                <a
-                  href="#"
-                  className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base leading-6 font-medium rounded-md text-white bg-blue-600 hover:bg-blue-500 focus:outline-none focus:border-blue-700 focus:shadow-outline-blue transition duration-150 ease-in-out"
-                >
-                  Get started
-                </a>
-              </div> */}
+            <div className="flex justify-center flex-col md:flex-row">
               <div className="mt-0 rounded-md shadow">
                 <a
                   href="#projet"
                   className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base leading-6 font-medium rounded-md text-blue-600 bg-white hover:text-blue-500 focus:outline-none focus:border-blue-300 focus:shadow-outline-blue transition duration-150 ease-in-out"
                 >
                   Voir le projet fédéral 2024
+                </a>
+              </div>
+              <div className="rounded-md shadow mt-4 md:mt-0 md:ml-4">
+                <a
+                  href="#contact"
+                  className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base leading-6 font-medium rounded-md text-white bg-blue-600 hover:bg-blue-500 focus:outline-none focus:border-blue-700 focus:shadow-outline-blue transition duration-150 ease-in-out"
+                >
+                  Nous contacter / Poser une question
                 </a>
               </div>
             </div>
