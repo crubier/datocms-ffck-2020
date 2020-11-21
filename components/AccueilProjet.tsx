@@ -87,7 +87,7 @@ export function AccueilProjet({ accueil, allProjets }: any) {
                           href={projet?.detailPdf?.url}
                           className="font-medium whitespace-no-wrap inline-flex items-center justify-center px-3 py-1 border border-transparent text-base leading-6 rounded-md text-gray-600 bg-white hover:bg-gray-100 focus:outline-none focus:border-blue-700 focus:shadow-outline-blue active:bg-gray-200 transition ease-in-out duration-150"
                         >
-                          Lire détails (PDF)
+                          En savoir plus
                           <svg
                             className="-mr-1 ml-1 h-5 w-5 text-gray-400"
                             xmlns="http://www.w3.org/2000/svg"
