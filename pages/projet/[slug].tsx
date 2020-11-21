@@ -64,12 +64,20 @@ export default function Projet({ projet }) {
             dangerouslySetInnerHTML={{ __html: projet?.contenu }}
           />
           <div className="w-full flex items-center justify-center mt-20 box-border">
+            <span className="inline-flex rounded-md shadow-sm text-white mr-8">
+              <a
+                href={projet.detailPdf.url}
+                className="whitespace-no-wrap inline-flex items-center justify-center px-4 py-2 border border-transparent text-base leading-6 font-medium rounded-md text-white bg-blue-600 hover:bg-blue-500 focus:outline-none focus:border-blue-700 focus:shadow-outline-blue active:bg-blue-700 transition ease-in-out duration-150"
+              >
+                <span className="text-white">Lire le projet détaillé</span>
+              </a>
+            </span>
             <span className="inline-flex rounded-md shadow-sm text-white">
               <a
                 href={`/#projet-${projet.slug}`}
-                className="whitespace-no-wrap inline-flex items-center justify-center px-4 py-2 border border-transparent text-base leading-6 font-medium rounded-md text-white bg-blue-600 hover:bg-blue-500 focus:outline-none focus:border-blue-700 focus:shadow-outline-blue active:bg-blue-700 transition ease-in-out duration-150"
+                className="whitespace-no-wrap inline-flex items-center justify-center px-4 py-2 border border-transparent text-base leading-6 font-medium rounded-md text-gray-900 bg-gray-200  hover:bg-gray-100 focus:outline-none focus:border-blue-700 focus:shadow-outline-blue active:bg-gray-400 transition ease-in-out duration-150"
               >
-                <span className="text-white">Retour</span>
+                <span className="text-gray-900">Retour</span>
               </a>
             </span>
           </div>
@@ -86,6 +94,9 @@ export async function getStaticProps({ params, preview = false }) {
     titre
     slug
     categorie
+    detailPdf {
+      url
+    }
     image {
       url
       width

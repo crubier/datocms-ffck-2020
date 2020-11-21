@@ -31,7 +31,7 @@ export function AccueilEquipe({ accueil, allEquipes }: any) {
           <h2 className="text-3xl leading-9 font-extrabold tracking-tight m-6 sm:m-4 sm:text-4xl mt-12">
             Notre Équipe
           </h2>
-          <ul className="mx-auto space-y-16 sm:grid sm:grid-cols-2 sm:gap-16 sm:space-y-0 lg:grid-cols-3 lg:max-w-5xl">
+          <ul className="mx-auto grid lg:grid-cols-4 sm:grid-cols-3 grid-cols-2 sm:gap-16 lg:max-w-5xl sm:mx-auto sm:max-w-xl">
             {allEquipes &&
               allEquipes.map((equipe) => (
                 <li key={equipe.slug} id={`equipe-${equipe.slug}`}>
