@@ -26,7 +26,7 @@ export default function Accueil({
       <AccueilProjet accueil={accueil} allProjets={allProjets} />
       <AccueilQuestion accueil={accueil} allQuestions={allQuestions} />
       <AccueilContact accueil={accueil} />
-      <div className="fixed bottom-6 right-6">
+      <div className="fixed bottom-6 right-6 z-40">
         <span className="inline-flex rounded-md shadow-sm">
           <a
             href={"#menu"}
@@ -41,10 +41,10 @@ export default function Accueil({
               aria-hidden="true"
             >
               <path
-                fill-rule="evenodd"
+                fillRule="evenodd"
                 // d="M 5.293 12.707 a 1 1 90 0 0 1.414 0 L 10 9.414 l 3.293 3.293 a 1 1 90 1 0 1.414 -1.414 l -4 -4 a 1 1 90 0 0 -1.414 0 l -4 4 a 1 1 90 0 0 0 1.414 z"
                 d="M 5.293 14.707 a 1 1 90 0 0 1.414 0 L 10 11.414 l 3.293 3.293 a 1 1 90 1 0 1.414 -1.414 l -4 -4 a 1 1 90 0 0 -1.414 0 l -4 4 a 1 1 90 0 0 0 1.414 z M 5.293 9.707 a 1 1 90 0 0 1.414 0 L 10 6.414 l 3.293 3.293 a 1 1 90 1 0 1.414 -1.414 l -4 -4 a 1 1 90 0 0 -1.414 0 l -4 4 a 1 1 90 0 0 0 1.414 z"
-                clip-rule="evenodd"
+                clipRule="evenodd"
               />
             </svg>
           </a>
